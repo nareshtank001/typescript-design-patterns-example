@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var CarBuilder_1 = require("./CarBuilder");
+var CarManualBuilder_1 = require("./CarManualBuilder");
+var Director_1 = require("./Director");
+var carBuilder = new CarBuilder_1.CarBuilder();
+var director = new Director_1.Director(carBuilder);
+director.constructSportsCar();
+console.log(carBuilder.getProduct());
+var carManualBuilder = new CarManualBuilder_1.CarManualBuilder();
+director = new Director_1.Director(carManualBuilder);
+director.constructSportsCar();
+console.log(carManualBuilder.getProduct());

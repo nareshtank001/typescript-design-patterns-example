@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var RoundHole_1 = require("./RoundHole");
+var RoundPeg_1 = require("./RoundPeg");
+var SquarePeg_1 = require("./SquarePeg");
+var SquarePegAdapter_1 = require("./SquarePegAdapter");
+var roundHole = new RoundHole_1.RoundHole(5);
+var roundPeg = new RoundPeg_1.RoundPeg(5);
+console.log(roundHole.fits(roundPeg));
+var smallSquPeg = new SquarePeg_1.SquarePeg(5);
+var smallSquPegAdapter = new SquarePegAdapter_1.SquarePegAdapter(smallSquPeg);
+console.log(roundHole.fits(smallSquPegAdapter));
+var largeSquPeg = new SquarePeg_1.SquarePeg(10);
+var largerSquPegAdapter = new SquarePegAdapter_1.SquarePegAdapter(largeSquPeg);
+console.log(roundHole.fits(largerSquPegAdapter));
